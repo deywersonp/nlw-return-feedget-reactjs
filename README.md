@@ -33,8 +33,8 @@ This project was developed using these techs:
 
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [TailwindCSS](https://sass-lang.com/documentation)
-- [i18n](https://tailwindcss.com/) 
+- [TailwindCSS](https://tailwindcss.com/)
+- [i18n](https://www.i18next.com/) 
 - [html2Canvas](https://html2canvas.hertzen.com/)
 
 <br>
