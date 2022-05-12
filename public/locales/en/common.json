@@ -1,0 +1,12 @@
+{
+  "FEEDBACK": "Feedback",
+  "LET_YOUR_FEEDBACK": "Send your feedback",
+  "PROBLEM": "Problem",
+  "IDEA": "Idea",
+  "OTHER": "Other",
+  "TEXTAREA_PLACEHOLDER": "Tell us in detail what's going on",
+  "BUTTON_TEXT": "Send feedback",
+  "FEEDBACK_SUCCESS_MESSAGE": "Thank you for the feedback",
+  "SEND_NEW_FEEDBACK_TEXT_BUTTON": "I want to send another",
+  "FOOTER_DESCRIPTION": "Made with ♥ by"
+}
