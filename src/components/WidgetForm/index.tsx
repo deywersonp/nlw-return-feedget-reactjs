@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
 import { FeedbackContentStep } from "./Steps/FeedbackContentStep";
 import { FeedbackSuccessStep } from "./Steps/FeedbackSuccessStep";
@@ -8,24 +9,24 @@ import thoughtImageUrl from '../../assets/thought.svg';
 
 export const feedbackTypes = {
   BUG: {
-    title: 'Problema',
+    title: 'PROBLEM',
     image: {
       source: bugImageUrl,
-      alt: 'Image de um inseto',
+      alt: 'Imagem de um inseto',
     },
   },
   IDEA: {
-    title: 'Ideia',
+    title: 'IDEA',
     image: {
       source: ideaImageUrl,
-      alt: 'Image de uma lâmpada',
+      alt: 'Imagem de uma lâmpada',
     },
   },
   OTHER: {
-    title: 'Outro',
+    title: 'OTHER',
     image: {
       source: thoughtImageUrl,
-      alt: 'Image de um balão de pensamento',
+      alt: 'Imagem de um balão de pensamento',
     },
   },
 };
@@ -33,6 +34,8 @@ export const feedbackTypes = {
 export type FeedbackType = keyof typeof feedbackTypes;
 
 export function WidgetForm() {
+  const { t } = useTranslation('common');
+
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
   const [feedbackSent, setFeedbackSent] = useState(false);
 
@@ -64,7 +67,7 @@ export function WidgetForm() {
       }
 
       <footer className="text-xs text-neutral-400">
-        Feito com ♥ por <a className="underline underline-offset-2" href="https://github.com/deywersonp">Deywerson Pereira</a>
+        {t('FOOTER_DESCRIPTION')} <a className="underline underline-offset-2" href="https://github.com/deywersonp">Deywerson Pereira</a>
       </footer>
     </div>
   );

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FeedbackType, feedbackTypes } from "..";
 import { CloseButton } from "../../CloseButton";
 
@@ -8,10 +9,14 @@ interface FeedbackTypeStepProps {
 export function FeedbackTypeStep({
   onFeedbackTypeChanged,
 }: FeedbackTypeStepProps) {
+  const { t } = useTranslation('common');
+
   return (
     <>
       <header>
-        <span className="text-xl leading-6">Deixe seu feedback</span>
+        <span className="text-xl leading-6">
+          {t('LET_YOUR_FEEDBACK')}
+        </span>
 
         <CloseButton />
       </header>
@@ -26,7 +31,7 @@ export function FeedbackTypeStep({
               type="button"
             >
               <img src={value.image.source} alt={value.image.alt} />
-              <span>{value.title}</span>
+              <span>{t(value.title)}</span>
             </button>
           )
         })}
